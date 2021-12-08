@@ -1,0 +1,83 @@
+.header__menuIcon {
+    padding: .3rem 0rem;
+    border-radius: 50%;
+    background: #fff;
+    height: 3rem;
+    width: 3rem;
+    display: grid;
+    z-index: 100;
+    place-items: center;
+    position: fixed;
+    top: 1.5rem;
+    right: $paddingX;
+    cursor: pointer;
+
+    &::after {
+        content: '';
+        border: 2px solid $white-color;
+        border-radius: 50%;
+        animation: menuIcon 1.4s cubic-bezier(0, .55, .45, 1) .2s infinite backwards;
+        @include setPosition($position: absolute, $top:0, $left:0, $width: 100%, $height:100%);
+
+    }
+
+    span {
+        width: 50%;
+        height: 2px;
+        display: block;
+        background: #000;
+        position: relative;
+
+        &::after,
+        &::before {
+            content: '';
+            width: 100%;
+            height: 2px;
+            background: #000;
+            position: absolute;
+            transition: all .3s ease-in-out;
+        }
+
+        &::after {
+            bottom: 7.6px;
+        }
+
+        &::before {
+            bottom: -7.6px;
+        }
+
+        &.close {
+            background: $white-color;
+
+            &::after {
+                transform: translateY(10px) rotate(45deg);
+            }
+
+            &::before {
+                transform: translateY(-6px) rotate(135deg);
+            }
+        }
+    }
+}
+
+@keyframes menuIcon {
+    0% {
+        opacity: 0;
+        transform: scale(.8);
+    }
+
+    25% {
+        opacity: .6;
+        transform: scale(1.1);
+    }
+
+    50% {
+        opacity: 0.3;
+        transform: scale(1.18);
+    }
+
+    100% {
+        opacity: .1;
+        transform: scale(1.1);
+    }
+}

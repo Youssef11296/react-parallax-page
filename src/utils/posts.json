@@ -1,0 +1,50 @@
+{
+    "collection_one": [{
+            "id": 11,
+            "title": "Collection one post one",
+            "imageUrl": "https://images.pexels.com/photos/1659438/pexels-photo-1659438.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+        },
+        {
+            "id": 12,
+            "title": "Collection one post two",
+            "imageUrl": "https://images.pexels.com/photos/1285625/pexels-photo-1285625.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+        },
+        {
+            "id": 13,
+            "title": "Collection one post three",
+            "imageUrl": "https://images.pexels.com/photos/450062/pexels-photo-450062.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+        }
+    ],
+    "collection_two": [{
+            "id": 21,
+            "title": "Collection two post one",
+            "imageUrl": "https://images.pexels.com/photos/8566698/pexels-photo-8566698.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+        },
+        {
+            "id": 22,
+            "title": "Collection two post two",
+            "imageUrl": "https://images.pexels.com/photos/10339488/pexels-photo-10339488.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+        },
+        {
+            "id": 23,
+            "title": "Collection two post three",
+            "imageUrl": "https://images.pexels.com/photos/9609289/pexels-photo-9609289.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+        }
+    ],
+    "collection_three": [{
+            "id": 31,
+            "title": "Collection three post one",
+            "imageUrl": "https://images.pexels.com/photos/1659438/pexels-photo-1659438.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+        },
+        {
+            "id": 32,
+            "title": "Collection three post two",
+            "imageUrl": "https://images.pexels.com/photos/1285625/pexels-photo-1285625.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+        },
+        {
+            "id": 33,
+            "title": "Collection three post three",
+            "imageUrl": "https://images.pexels.com/photos/450062/pexels-photo-450062.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+        }
+    ]
+}

@@ -1,26 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// modules
+import { useContext, useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+// components
+import HeaderComponent from "./components/AppComponents/Header/Header";
+import { getPosts } from "./context/actions";
+import { MainContext } from "./context/mainContext";
+// pages
+import HomePage from "./pages/Home";
+// styles
+import "./styles/App.scss";
+import posts from "./utils/posts.json";
 
-function App() {
+const App = () => {
+  const value: any = useContext(MainContext);
+  const { dispatch } = value;
+
+  useEffect(() => {
+    dispatch(getPosts([...posts.collection_one]));
+  }, [dispatch]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <div id="cursor"></div>
+        <div className="overlay bg" data-speed="5"></div>
+        <HeaderComponent />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+        </Routes>
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;

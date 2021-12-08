@@ -1,0 +1,27 @@
+.posts {
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(22rem, 330px));
+        justify-content: center;
+        grid-gap: 1rem;
+        margin: 2rem;
+
+        &:hover {
+            .postItem {
+                opacity: .5;
+                filter: hue-rotate(.15turn) blur(5px);
+
+                &:hover {
+                    opacity: 1;
+                    filter: hue-rotate(0) blur(0);
+                }
+            }
+        }
+    }
+
+    &__options {
+        button {
+            margin: 4rem auto 1rem;
+        }
+    }
+}

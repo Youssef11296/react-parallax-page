@@ -1,0 +1,9 @@
+@import './HomeWrapper';
+
+.home {
+    margin-top: 8rem;
+    flex: 1;
+    min-height: 100vh;
+    height: 100%;
+    overflow-y: scroll;
+}

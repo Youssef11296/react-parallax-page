@@ -1,0 +1,71 @@
+@import '../';
+
+
+@mixin custom-border {
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    bottom: 3px;
+    left: 3px;
+    display: block;
+    z-index: 2;
+    border: 1px solid $white-color;
+}
+
+.postItem {
+    height: 27.5rem;
+    margin: 1rem;
+    overflow: hidden;
+    border-radius: .2rem;
+    color: #fff;
+    font-size: 2rem;
+    position: relative;
+    cursor: pointer;
+    transition: all .4s ease-in;
+
+    span {
+        @include custom-border();
+
+        &::after {
+            content: '';
+            @include custom-border()
+        }
+    }
+
+    &__title {
+        @include setPosition($position: absolute, $top:85%, $left:0, $width:100%);
+        text-align: center;
+        transition: all .3s ease;
+    }
+
+    &__wrapper {
+        width: 100%;
+        height: 100%;
+
+        .postItem__image {
+            width: 100%;
+            height: 100%;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            transition: all .5s ease-in;
+            animation: postImage 1.5s ease forwards;
+        }
+    }
+
+    &:hover {
+        .postItem__title {
+            top: 80%;
+        }
+    }
+}
+
+@keyframes postImage {
+    0% {
+        transform: scale(3);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}

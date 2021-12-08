@@ -1,0 +1,19 @@
+$paddingX: 5rem;
+
+
+@import '../';
+@import './Nav';
+@import './MenuIcon';
+@import './Logo';
+
+header {
+    padding: 1rem $paddingX;
+    width: 100%;
+    height: 10vh;
+    z-index: 100;
+    @include setPosition($position: fixed, $top: 0, $left:0, $width:100%, $height:10vh);
+
+    .header__options {
+        @include setFlex($justify: space-between, $align: center);
+    }
+}

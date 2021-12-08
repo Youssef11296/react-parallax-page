@@ -1,0 +1,33 @@
+// global variables
+$white-color: #fff;
+$black-color: #000;
+$main-bg: #171619;
+
+// mixins
+@mixin setCircleClipPath($size, $x, $y) {
+    clip-path: circle($size at $x $y);
+    -webkit-clip-path: circle($size at $x $y);
+    -moz-clip-path: circle($size at $x $y);
+    -o-clip-path: circle($size at $x $y);
+}
+
+@mixin setFlex($justify: flex-start,
+    $align: flex-start,
+    $flex: initial,
+    $direction: row,
+    $wrap: nowrap) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex: $flex;
+    flex-wrap: nowrap;
+    flex-direction: $direction;
+}
+
+@mixin setPosition($position, $top, $left, $width: initial, $height:initial) {
+    position: $position;
+    top: $top;
+    left: $left;
+    width: $width;
+    height: $height;
+}

@@ -1,3 +1,23 @@
+# Overview
+
+This is a simple page with pretty parallax animations built with react
+
+# Top Dependencies & Techs
+
+- React JS
+
+- React Context API
+
+- React Hooks
+
+- Sass
+
+- CSS Animations
+
+- Framer Motion
+
+- Vanilla JS Tilt
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
